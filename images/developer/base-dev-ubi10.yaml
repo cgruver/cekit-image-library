@@ -1,6 +1,6 @@
-name: dev-tools/base-ubi10
+name: dev-spaces/workspace-base
 from: registry.access.redhat.com/ubi10:10.0
-version: latest
+version: ubi10
 packages:
   manager: dnf
   manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"

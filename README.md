@@ -22,8 +22,8 @@ cekit --descriptor images/app-product/ai-home-lab.yaml build podman --tag nexus.
 podman push nexus.clg.lab:5002/dev-spaces/ai-home-lab:latest
 
 cekit --descriptor images/app-product/cajun-navy.yaml build podman --build-flag --volume --build-flag /tmp/node-extra-certificates/ca.crt:/tmp/node-extra-certificates/ca.crt:Z --build-arg NODE_EXTRA_CA_CERTS=/tmp/node-extra-certificates/ca.crt --tag nexus.clg.lab:5002/dev-spaces/cajun-navy:latest
-podman push --cert-dir /public-certs nexus.clg.lab:5002/dev-spaces/cajun-navy:latest
+podman push nexus.clg.lab:5002/dev-spaces/cajun-navy:latest
 
 cekit --descriptor images/app-product/che-demo-app.yaml build podman --build-flag --volume --build-flag /tmp/node-extra-certificates/ca.crt:/tmp/node-extra-certificates/ca.crt:Z --build-arg NODE_EXTRA_CA_CERTS=/tmp/node-extra-certificates/ca.crt --tag nexus.clg.lab:5002/dev-spaces/che-demo-app:latest
-podman push --cert-dir /public-certs nexus.clg.lab:5002/dev-spaces/che-demo-app:latest
+podman push nexus.clg.lab:5002/dev-spaces/che-demo-app:latest
 ```
