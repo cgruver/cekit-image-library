@@ -1,4 +1,4 @@
-name: dev-tools/cajun-navy
+name: /dev-spaces/cajun-navy
 from: nexus.clg.lab:5002/dev-spaces/workspace-base:ubi10
 version: latest
 packages:

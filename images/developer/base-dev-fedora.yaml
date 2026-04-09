@@ -1,6 +1,6 @@
-name: dev-tools/base-fedora
+name: dev-spaces/workspace-base
 from: quay.io/fedora/fedora:42
-version: latest
+version: fedora42
 packages:
   manager: dnf
   manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"

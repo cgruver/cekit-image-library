@@ -1,4 +1,4 @@
-name: dev-tools/ops-tools
+name: dev-spaces/ops-tools
 from: nexus.clg.lab:5002/dev-spaces/workspace-base:ubi10
 version: latest
 packages:
