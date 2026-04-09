@@ -1,4 +1,4 @@
-name: /dev-spaces/che-demo-app
+name: dev-spaces/che-demo-app
 from: nexus.clg.lab:5002/dev-spaces/workspace-base:ubi10
 version: latest
 packages:
