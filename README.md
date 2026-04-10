@@ -1,3 +1,8 @@
+# CeKit Image Descriptor Library
+
+This is a companion project to [https://github.com/cgruver/opinionated-dev-spaces](https://github.com/cgruver/opinionated-dev-spaces)
+
+This project contains Module definitions and Image descriptors that are consumed by CeKit to build images for my lab environment
 
 ```bash
 cekit --descriptor images/developer/base-dev-ubi9.yaml build podman --tag nexus.clg.lab:5002/dev-spaces/workspace-base:ubi9
