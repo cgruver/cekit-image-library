@@ -9,3 +9,6 @@ modules:
   - path: "../../modules"
   install:
   - name: openvino
+  - name: node22
+  - name: opencode
+  - name: github
