@@ -1,4 +1,4 @@
-name: cekit-images/ai-home-lab
+name: ai-home-lab
 from: image-registry.openshift-image-registry.svc:5000/cekit-images/workspace-base:ubi10
 version: latest
 packages:

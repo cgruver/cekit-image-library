@@ -1,4 +1,4 @@
-name: cekit-images/cajun-navy
+name: cajun-navy
 from: image-registry.openshift-image-registry.svc:5000/cekit-images/workspace-base:ubi10
 version: latest
 packages:

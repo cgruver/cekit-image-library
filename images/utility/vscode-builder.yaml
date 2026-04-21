@@ -1,4 +1,4 @@
-name: cekit-images/vscode-builder
+name: vscode-builder
 from: image-registry.openshift-image-registry.svc:5000/cekit-images/workspace-base:ubi9
 version: latest
 packages:

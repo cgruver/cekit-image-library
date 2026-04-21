@@ -1,4 +1,4 @@
-name: cekit-images/workspace-base
+name: workspace-base
 from: quay.io/fedora/fedora:42
 version: fedora42
 packages:

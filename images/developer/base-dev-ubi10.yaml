@@ -1,4 +1,4 @@
-name: cekit-images/workspace-base
+name: workspace-base
 from: registry.access.redhat.com/ubi10:10.0
 version: ubi10
 packages:
