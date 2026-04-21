@@ -10,3 +10,9 @@ python3 /usr/bin/export_model.py "\$@"
 EOF
 
 chmod 755 /usr/bin/exportModel
+
+TEMP_DIR="$(mktemp -d)"
+curl -fsSL -o ${TEMP_DIR}/ovms_redhat_python_off.tar.gz https://github.com/openvinotoolkit/model_server/releases/download/v2026.0/ovms_redhat_python_off.tar.gz
+tar -x --no-auto-compress -f ${TEMP_DIR}/ovms_redhat_python_off.tar.gz -C ${TEMP_DIR}
+mv ${TEMP_DIR}/ovms /usr/local/ovms
+rm -rf "${TEMP_DIR}"
