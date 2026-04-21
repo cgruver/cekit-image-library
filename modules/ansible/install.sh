@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 pip3 install ansible-navigator
 pip3 install ansible

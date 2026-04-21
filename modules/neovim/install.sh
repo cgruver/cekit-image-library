@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e
 TEMP_DIR="$(mktemp -d)" 
 curl -fsSL -o ${TEMP_DIR}/nvim-linux-x86_64.tar.gz https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/nvim-linux-x86_64.tar.gz
 tar -xzf ${TEMP_DIR}/nvim-linux-x86_64.tar.gz -C ${TEMP_DIR} 

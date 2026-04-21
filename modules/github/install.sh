@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 TEMP_DIR="$(mktemp -d)"
 GH_VERSION=$(basename $(curl -LsI -o /dev/null -w %{url_effective} https://github.com/cli/cli/releases/latest) | cut -d'v' -f2)

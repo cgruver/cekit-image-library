@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e
 TEMP_DIR="$(mktemp -d)" 
 YQ_VER=$(basename $(curl -Ls -o /dev/null -w %{url_effective} https://github.com/mikefarah/yq/releases/latest))
 curl -fsSL -o ${TEMP_DIR}/yq.tar.gz https://github.com/mikefarah/yq/releases/download/${YQ_VER}/yq_linux_amd64.tar.gz 

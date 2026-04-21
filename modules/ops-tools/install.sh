@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e
 TEMP_DIR="$(mktemp -d)" 
 mkdir -p /usr/local/quarkus-cli/lib 
 mkdir /usr/local/quarkus-cli/bin 
