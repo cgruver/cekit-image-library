@@ -1,5 +1,5 @@
-name: dev-spaces/vscode-builder
-from: nexus.clg.lab:5002/dev-spaces/workspace-base:ubi9
+name: cekit-images/vscode-builder
+from: image-registry.openshift-image-registry.svc:5000/cekit-images/workspace-base:ubi9
 version: latest
 packages:
   manager: dnf
