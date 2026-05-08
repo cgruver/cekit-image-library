@@ -1,5 +1,5 @@
 name: workspace-base
-from: registry.access.redhat.com/ubi10:10.0
+from: image-registry.openshift-image-registry.svc:5000/imported-images/ubi10:10.2
 version: ubi10
 packages:
   manager: dnf

@@ -1,5 +1,5 @@
 name: workspace-base
-from: quay.io/fedora/fedora:42
+from: image-registry.openshift-image-registry.svc:5000/imported-images/fedora:42
 version: fedora42
 packages:
   manager: dnf
