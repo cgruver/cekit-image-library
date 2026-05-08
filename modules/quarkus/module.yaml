@@ -8,7 +8,7 @@ artifacts:
   target: new-project.sh
 args:
 - name: QUARKUS_VERSION
-  value: 3.15.2
+  value: 3.33.1.1
 envs:
 - name: JBANG_DIR
   value: "/usr/local/jbang"
