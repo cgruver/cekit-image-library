@@ -9,3 +9,5 @@ modules:
   - path: "../../modules"
   install:
   - name: ops-tools
+  - name: node24
+  - name: yarn
