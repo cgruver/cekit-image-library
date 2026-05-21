@@ -2,4 +2,5 @@
 set -e
 npm install -g @kilocode/cli
 mkdir -p ${HOME}/.config/kilo
-ln -s /projects/.globalconfig/kilo.jsonc ${HOME}/.config/kilo/kilo.jsonc
+chown -R 1000:1000 ${HOME}/.config
+ln -s /projects/.globalconfig/kilo.jsonc /projects/.config/kilo/kilo.jsonc
