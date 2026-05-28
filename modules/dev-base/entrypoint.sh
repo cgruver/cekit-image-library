@@ -54,4 +54,6 @@ then
   fi
 fi
 
+. /workspace-init.sh
+
 exec "$@"

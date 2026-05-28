@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -e
 npm install -g @kilocode/cli
-mkdir -p ${HOME}/.config/kilo
-chown -R 1000:1000 ${HOME}/.config
-ln -s /projects/.globalconfig/kilo.jsonc /projects/.config/kilo/kilo.jsonc
+
+cat << EOF >> /workspace-init.sh
+if [ ! -f ${HOME}/.globalconfig/kilo.jsonc ]
+then
+  mkdir -p ${HOME}/.config/kilo
+  ln -s ${HOME}/.globalconfig/kilo.jsonc ${HOME}/.config/kilo/kilo.jsonc
+fi
+
+EOF
