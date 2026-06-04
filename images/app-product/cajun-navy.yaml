@@ -13,7 +13,5 @@ modules:
   - name: java25
   - name: maven
   - name: quarkus
-  - name: opencode
-  - name: kilo-cli
   - name: github
 

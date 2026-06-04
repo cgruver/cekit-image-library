@@ -16,3 +16,8 @@ echo "user:1001:64535" >> /etc/subuid
 echo "user:1001:64535" >> /etc/subgid
 setcap cap_setuid+ep /usr/bin/newuidmap
 setcap cap_setgid+ep /usr/bin/newgidmap
+if [ ! -f /workspace-init.sh ]
+then
+  echo 'echo "Setting workspace config"' > /workspace-init.sh
+fi
+chmod +x /workspace-init.sh

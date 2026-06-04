@@ -8,5 +8,4 @@ then
   mkdir -p ${HOME}/.config/kilo
   ln -s /globalconfig/kilo.jsonc ${HOME}/.config/kilo/kilo.jsonc
 fi
-
 EOF
