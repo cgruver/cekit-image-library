@@ -11,3 +11,5 @@ modules:
   - name: openvino
   - name: node22
   - name: github
+  - name: opencode
+  - name: kilo-cli

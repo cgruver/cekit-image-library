@@ -13,5 +13,3 @@ modules:
   install:
   - name: dev-base
   - name: yq
-  - name: opencode
-  - name: kilo-cli

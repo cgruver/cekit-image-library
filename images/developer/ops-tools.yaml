@@ -11,3 +11,5 @@ modules:
   - name: ops-tools
   - name: node24
   - name: yarn
+  - name: opencode
+  - name: kilo-cli
