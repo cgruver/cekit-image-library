@@ -2,6 +2,9 @@ schema_version: 1
 name: maven
 version: v1.0
 description: "Installs Latest Apache Maven"
+args:
+- name: MAVEN_VERSION
+  value: 3.9.16
 envs:
 - name: MAVEN_OPTS
   value: -Djavax.net.ssl.trustStore=${HOME}/.keystore -Djavax.net.ssl.trustStorePassword=changeit
