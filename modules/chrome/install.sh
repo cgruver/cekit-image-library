@@ -11,24 +11,21 @@ gpgkey=https://dl.google.com/linux/linux_signing_key.pub
 name=CentOS Stream 9 - BaseOS
 baseurl=https://mirror.stream.centos.org/9-stream/BaseOS/\$basearch/os/
 enabled=1
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+gpgcheck=0
 repo_gpgcheck=0
 
 [centos-appstream]
 name=CentOS Stream 9 - AppStream
 baseurl=https://mirror.stream.centos.org/9-stream/AppStream/\$basearch/os/
 enabled=1
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+gpgcheck=0
 repo_gpgcheck=0
 
 [centos-crb]
 name=CentOS Stream 9 - CRB
 baseurl=https://mirror.stream.centos.org/9-stream/CRB/\$basearch/os/
 enabled=1
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+gpgcheck=0
 repo_gpgcheck=0
 EOF
 
