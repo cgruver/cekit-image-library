@@ -10,7 +10,9 @@ packages:
 modules:
   repositories:
   - path: "../../modules"
+    name: modules
   install:
   - name: dev-base
   - name: yq
+  - name: chrome
 
