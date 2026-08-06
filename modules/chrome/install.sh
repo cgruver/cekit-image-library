@@ -30,7 +30,6 @@ repo_gpgcheck=0
 EOF
 
 dnf clean all
-# dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel{,-next}-release-latest-9.noarch.rpm
 dnf install -y tigervnc-server novnc google-chrome-stable alsa-firmware alsa-lib alsa-tools-firmware catatonit procps-ng openssl hostname
 cp /tmp/artifacts/dschrome /usr/local/bin/dschrome
