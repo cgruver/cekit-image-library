@@ -1,0 +1,14 @@
+name: base-chrome-az
+from: image-registry.openshift-image-registry.svc:5000/cekit-images/workspace-base:ubi9
+version: latest
+packages:
+  manager: dnf
+  manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"
+modules:
+  repositories:
+  - path: "../../modules"
+    name: modules
+  install:
+  - name: chrome
+  - name: azure-cli
+
