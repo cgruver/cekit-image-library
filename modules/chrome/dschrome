@@ -16,6 +16,7 @@ function startChrome() {
     mkdir -p ${HOME}/.config/google-chrome
     touch ${HOME}/.config/google-chrome/'First Run'
   fi
+  rm -f ${HOME}/.config/google-chrome/Singleton{Cookie,Lock,Socket}
   VNC_PASSWD=$(genVncPasswd)
   echo ${VNC_PASSWD} | vncpasswd -f > /tmp/vncpasswd
   echo ${VNC_PASSWD} > /tmp/vncsec
