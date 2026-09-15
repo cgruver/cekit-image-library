@@ -17,22 +17,6 @@ if [ ! -d "${HOME}/.config/containers" ]; then
   fi
 fi
 
-# Create Java Keystore
-if [ command -v keytool > /dev/null 2>&1 ] & [ ! -f ${HOME}/.keystore ]
-then
-  CA_BUNDLE="${JAVA_CA_BUNDLE:-/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem}"
-  KEYSTORE_PASSWORD="${JAVA_KEYSTORE_PASSWORD:-changeit}"
-  TEMP_DIR="$(mktemp -d)"
-  pushd ${TEMP_DIR}
-  cat ${CA_BUNDLE} | grep -v "#" > tmpfile
-  csplit -z -f crt- ./tmpfile '/-----BEGIN CERTIFICATE-----/' '{*}'
-  for cert in crt-*
-  do
-    keytool -import -noprompt -file $cert -storepass ${KEYSTORE_PASSWORD} -alias service-$cert
-  done
-  popd
-fi
-
 # Configure Z shell
 if [ ! -f ${HOME}/.zshrc ]
 then
@@ -55,5 +39,21 @@ then
 fi
 
 . /workspace-init.sh
+
+# Create Java Keystore
+if [ command -v keytool > /dev/null 2>&1 ] & [ ! -f ${HOME}/.keystore ]
+then
+  CA_BUNDLE="${JAVA_CA_BUNDLE:-/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem}"
+  KEYSTORE_PASSWORD="${JAVA_KEYSTORE_PASSWORD:-changeit}"
+  TEMP_DIR="$(mktemp -d)"
+  pushd ${TEMP_DIR}
+  cat ${CA_BUNDLE} | grep -v "#" > tmpfile
+  csplit -z -f crt- ./tmpfile '/-----BEGIN CERTIFICATE-----/' '{*}'
+  for cert in crt-*
+  do
+    keytool -import -noprompt -file $cert -storepass ${KEYSTORE_PASSWORD} -alias service-$cert
+  done
+  popd
+fi
 
 exec "$@"
