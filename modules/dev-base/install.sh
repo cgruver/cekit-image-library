@@ -9,9 +9,13 @@ chmod 755 /entrypoint.sh
 # Setup for root-less podman
 #
 mkdir -p ${HOME}/.bin
+groupadd -g 1000 user
+useradd -u 1000 -g 1000 -d ${HOME} -s /bin/bash user
+usermod -L user
+chmod 400 /etc/shadow
 chown -R 1000:1000 ${HOME}
-echo "user:x:1000:1000:devspaces user:${HOME}:/bin/bash" >> /etc/passwd
-echo "user:x:1000:" >> /etc/group
+echo "user:1:999" > /etc/subuid
+echo "user:1:999" > /etc/subgid
 echo "user:1001:64535" >> /etc/subuid
 echo "user:1001:64535" >> /etc/subgid
 setcap cap_setuid+ep /usr/bin/newuidmap
