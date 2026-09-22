@@ -16,4 +16,4 @@ rm -rf "${TEMP_DIR}"
 BUTANE_VERSION=$(basename $(curl -Ls -o /dev/null -w %{url_effective} https://github.com/coreos/butane/releases/latest))
 echo "Butane Release: ${BUTANE_VERSION}"
 wget -O /usr/local/bin/butane https://github.com/coreos/butane/releases/download/${BUTANE_VERSION}/butane-x86_64-unknown-linux-gnu
-chmod 700 /usr/local/bin/butane
+chmod 755 /usr/local/bin/butane
