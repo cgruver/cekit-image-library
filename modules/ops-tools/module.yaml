@@ -11,6 +11,5 @@ packages:
   install:
   - helm
   - kustomize
-  - butane
 execute:
 - script: install.sh
