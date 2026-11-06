@@ -12,7 +12,6 @@ modules:
   - name: node24
   - name: angular
   - name: java25
-  - name: maven
   - name: quarkus
   - name: github
   - name: opencode

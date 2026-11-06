@@ -12,7 +12,6 @@ modules:
   - name: node20
   - name: angular
   - name: java21
-  - name: maven
   - name: quarkus
   - name: opencode
   - name: kilo-cli
