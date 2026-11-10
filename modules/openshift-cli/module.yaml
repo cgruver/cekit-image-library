@@ -1,0 +1,7 @@
+schema_version: 1
+name: openshift-cli
+version: latest
+description: "Installs OpenShift CLI"
+execute:
+- script: install.sh
+

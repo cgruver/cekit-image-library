@@ -14,3 +14,4 @@ modules:
   - name: yarn
   - name: opencode
   - name: kilo-cli
+  - name: openshift-cli
