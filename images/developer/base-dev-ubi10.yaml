@@ -14,4 +14,4 @@ modules:
   install:
   - name: dev-base
   - name: yq
-  - name: openshift-cli
+  # - name: openshift-cli
