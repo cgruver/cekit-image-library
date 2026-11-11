@@ -1,17 +1,32 @@
-name: ops-tools
-from: image-registry.openshift-image-registry.svc:5000/cekit-images/workspace-base:ubi10
-version: latest
-packages:
-  manager: dnf
-  manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"
-modules:
-  repositories:
-  - path: "../../modules"
-    name: modules
-  install:
-  - name: ops-tools
-  - name: node24
-  - name: yarn
-  - name: opencode
-  - name: kilo-cli
-  # - name: openshift-cli
+- name: openshift-cli
+  from: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
+  version: 0.0.0
+  description: OpenShift CLI image from internal image registry
+
+- name: ops-tools
+  from: image-registry.openshift-image-registry.svc:5000/cekit-images/workspace-base:ubi10
+  version: latest
+  packages:
+    manager: dnf
+    manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"
+  modules:
+    repositories:
+    - path: "../../modules"
+      name: modules
+    install:
+    - name: ops-tools
+    - name: node24
+    - name: yarn
+    - name: opencode
+    - name: kilo-cli
+  artifacts:
+    - name: oc
+      image: openshift-cli
+      path: /usr/bin/oc
+      target: oc
+      dest: /usr/bin/
+    - name: kubectl
+      image: openshift-cli
+      path: /usr/bin/kubectl
+      target: kubectl
+      dest: /usr/bin/
