@@ -1,5 +1,5 @@
 name: vscode-builder
-from: image-registry.openshift-image-registry.svc:5000/cekit-images/workspace-base:ubi9
+from: image-registry.openshift-image-registry.svc:5000/cekit-images/workspace-base:ubi10
 version: latest
 packages:
   manager: dnf
