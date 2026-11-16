@@ -5,7 +5,7 @@ packages:
   manager: dnf
   manager_flags: "--disableplugin=subscription-manager --setopt=tsflags=nodocs --setopt=install_weak_deps=0"
   install:
-  - https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+  # - https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
   - wget
 modules:
   repositories:
